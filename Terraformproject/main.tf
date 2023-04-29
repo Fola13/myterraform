@@ -1,4 +1,10 @@
 terraform {
+   backend "azurerm" {
+        resource_group_name  = "devopsdemo-rg"
+        storage_account_name = "devopsdemost"
+        container_name       = "terraformstate"
+        key                  = "terraform.tfstate"
+    }
 
    required_version = ">=0.12"
 
